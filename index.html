@@ -14,17 +14,72 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav></nav>
+    <nav class="px-12 py-4">
+      <div class="container flex justify-between items-center">
+        <button onclick="openNavbar()" class="absolute top-4 right-8 md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-10 h-10 fill-sky-600">
+            <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+          </svg>
+        </button>
+        <div class="logo">
+          <img src="images/logo sekolah 1.png" alt="" class="w-14 h-14" />
+        </div>
+        <div class="list gap-8 hidden md:flex">
+          <ul class="flex gap-8">
+            <li><a href="" class="font-medium hover:text-sky-600 transition-all duration-300 ease-in-out">Beranda</a></li>
+            <li><a href="" class="font-medium hover:text-sky-600 transition-all duration-300 ease-in-out">Tentang Kami</a></li>
+            <li><a href="" class="font-medium hover:text-sky-600 transition-all duration-300 ease-in-out">Program</a></li>
+            <li><a href="" class="font-medium hover:text-sky-600 transition-all duration-300 ease-in-out">Guru</a></li>
+            <li><a href="" class="font-medium hover:text-sky-600 transition-all duration-300 ease-in-out">Siswa</a></li>
+            <li><a href="" class="font-medium hover:text-sky-600 transition-all duration-300 ease-in-out">Berita</a></li>
+          </ul>
+          <div class="features flex gap-4 w-fit hover:fill-sky-600 hover:text-sky-600 cursor-pointer font-medium">
+            Fitur
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-5 h-5">
+              <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="buttton hidden">
+          <button class="py-2 px-6 bg-sky-600 rounded-full text-white font-medium">Contact</button>
+        </div>
+      </div>
+    </nav>
+
+    <aside class="menu w-full h-full bg-white bg-opacity-90 fixed z-[999] -translate-y-full transition-all duration-500 ease-in-out top-0">
+      <button onclick="closeNavbar()" class="absolute top-4 right-8 z-[999]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-10 h-10 fill-sky-600">
+          <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+        </svg>
+      </button>
+
+      <div class="content h-full flex justify-center relative z-50">
+        <div class="logo">
+          <img src="images/logo sekolah 1.png" alt="" class="h-10 absolute top-4 left-8" />
+        </div>
+
+        <ul class="flex flex-col text-center gap-8 py-24">
+          <li><a href="" class="text-sky-600 font-medium text-sm">Beranda</a></li>
+          <li><a href="" class="text-sky-600 font-medium text-sm">Tentang Kami</a></li>
+          <li><a href="" class="text-sky-600 font-medium text-sm">Program</a></li>
+          <li><a href="" class="text-sky-600 font-medium text-sm">Guru</a></li>
+          <li><a href="" class="text-sky-600 font-medium text-sm">Siswa</a></li>
+          <li><a href="" class="text-sky-600 font-medium text-sm">Berita</a></li>
+          <li><a href="" class="text-sky-600 font-medium text-sm">Fitur</a></li>
+        </ul>
+      </div>
+    </aside>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container w-full h-screen py-32 md:px-0 mx-auto">
+    <section class="hero overflow-x-hidden">
+      <div class="container w-full h-full py-32 md:px-0 mx-auto\">
         <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-          <div class="image relative w-full h-full flex justify-center md:mt-0 px-12 md:w-1/2">
+          <div class="image relative w-full h-full flex justify-center md:mt-0 px-12 md:w-1/2 items-center">
             <div class="card w-full xl:w-fit xl:h-fit h-full relative">
               <img src="images/Rectangle 107.png" alt="" class="object-cover md:object-contain w-full md:w-fit h-full md:h-fit rounded-2xl" />
 
-              <div class="testimoni flex gap-4 w-44 bg-white p-3 px-5 rounded-xl shadow-2xl absolute top-10 -right-20">
+              <div class="testimoni flex gap-4 w-44 bg-white p-3 px-5 rounded-xl shadow-2xl absolute top-10 -right-16">
                 <div class="elipse w-12">
                   <img src="images/Ellipse 1.png" alt="" class="w-full" />
                 </div>
@@ -60,7 +115,7 @@
                   <p class="font-bold text-[8px]">"Jika Ingin Sukses Belajarlah Bersabar"</p>
                 </div>
               </div>
-              <div class="testimoni flex gap-4 w-44 bg-white p-3 px-5 rounded-xl shadow-2xl absolute bottom-10 -left-20">
+              <div class="testimoni flex gap-4 w-44 bg-white p-3 px-5 rounded-xl shadow-2xl absolute bottom-10 -left-14">
                 <div class="caption">
                   <p class="font-bold text-[8px]">"Belajar Itu Menyenangkan kuncinya jangan pernah menyerah oleh apapun itu"</p>
                 </div>
@@ -124,5 +179,96 @@
         </div>
       </div>
     </section>
+
+    <!-- About Section -->
+    <section>
+      <div class="container w-full mx-auto px-14 py-16">
+        <div class="caption">
+          <h2 class="text-3xl font-bold text-center">Kenapa Harus <span class="text-sky-600">HSI IDN </span> <br />Purworejo</h2>
+          <p class="font-medium text-slate-400 text-center mt-12">
+            Alasan kenapa harus memilih untuk bergabung dengan <br />
+            SMA IT HSI IDN Purworejo
+          </p>
+        </div>
+        <div class="container-card flex flex-wrap md:flex-row justify-center gap-12">
+          <div class="card w-fit flex flex-col gap-4 mt-12 justify-center shadow-2xl px-8 py-12 rounded-xl">
+            <img src="images/computer 1.png" alt="" class="mx-auto" />
+            <h4 class="text-xl font-bold text-center">Fasilitas Lengkap</h4>
+            <p class="text-sm text-slate-400 font-medium text-center">
+              Penunjang belajar <br />
+              dengan kualitas terbaik
+            </p>
+          </div>
+          <div class="card w-fit flex flex-col gap-4 mt-12 justify-center shadow-2xl px-8 py-12 rounded-xl">
+            <img src="images/bank 1.png" alt="" class="mx-auto" />
+            <h4 class="text-xl font-bold text-center">Ligkungan Nyaman</h4>
+            <p class="text-sm text-slate-400 font-medium text-center">
+              Berada di lingkungan <br />
+              Yang nyaman dan asri
+            </p>
+          </div>
+          <div class="card w-fit flex flex-col gap-4 mt-12 justify-center shadow-2xl px-8 py-12 rounded-xl">
+            <img src="images/team 1.png" alt="" class="mx-auto" />
+            <h4 class="text-xl font-bold text-center">Fasilitas Lengkap</h4>
+            <p class="text-sm text-slate-400 font-medium text-center">
+              Guru terbaik <br />
+              dengan pengalaman
+            </p>
+          </div>
+          <div class="card w-fit flex flex-col gap-4 mt-12 justify-center shadow-2xl px-8 py-12 rounded-xl">
+            <img src="images/team (1) 1.png" alt="" class="mx-auto" />
+            <h4 class="text-xl font-bold text-center">Kerja sama Luas</h4>
+            <p class="text-sm text-slate-400 font-medium text-center">
+              Dapat kesempatan kerja <br />
+              yang lebih terjamin
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profil Section -->
+    <section>
+      <div class="container w-full h-full mt-32 mx-auto px-8">
+        <div class="title text-center">
+          <h2 class="text-3xl font-bold">
+            Profil SMA IT <span class="text-sky-600">HSI IDN</span> <br />
+            Purworejo
+          </h2>
+        </div>
+        <div class="content flex flex-col md:flex-row justify-center mt-12 gap-16">
+          <div class="image w-fit h-fit flex justify-center md:justify-start">
+            <img src="images/kepala-sekolah.jpg" alt="" class="rounded-xl" />
+          </div>
+          <div class="caption flex flex-col justify-center">
+            <h3 class="font-bold text-3xl">
+              Sambutan Kepala Sekolah <br />
+              SMA IT <span class="text-sky-600">HSI IDN</span> Purworejo
+            </h3>
+            <p class="font-medium text-sm text-slate-400 mt-10">
+              sekolah adalah tempat mencetak penerus bangsa yang <br />
+              berkualitas dan berprestasi di segala bidang yang dapat <br />
+              bersaing di dunia internasional <br /><br />
+              dan Sekolah adalah tempat anak-anak mendapatkan <br />dukungan untuk melengkapi pembelajarannya di sekolah
+            </p>
+            <p class="font-medium text-sm text-slate-400"></p>
+            <div class="button mt-8">
+              <button class="bg-sky-600 text-white font-medium px-6 py-3 rounded-full text-sm">Baca Selanjutnya ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Major Section -->
+    <section class="mt-32">
+      <div class="container">
+        <h2 class="font-bold text-3xl text-center">
+          Jurusan Di SMA IT <span class="text-sky-600">HSI IDN</span> <br />
+          Purworejo
+        </h2>
+      </div>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
